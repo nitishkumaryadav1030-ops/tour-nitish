@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Explore India | Tour Guide</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+
+  <header>
+
+    <nav class="navbar">
+
+      <div class="logo">
+        Explore<span>India</span>
+      </div>
+
+      <ul class="nav-links">
+
+        <li><a href="#home">Home</a></li>
+
+        <li><a href="#destinations">Destinations</a></li>
+
+        <li><a href="#packages">Packages</a></li>
+
+        <li><a href="#gallery">Gallery</a></li>
+
+        <li><a href="#booking">Booking</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+
+      <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- Home Section -->
+
+  <section id="home" class="hero">
+
+    <div class="hero-content">
+
+      <h1>Explore The Beauty Of India</h1>
+
+      <p>
+        Discover beautiful places, exciting adventures
+        and unforgettable journeys.
+      </p>
+
+      <a href="#destinations" class="btn">
+        Explore Now
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- Destinations -->
+
+  <section id="destinations" class="section">
+
+    <h2>Popular Destinations</h2>
+
+    <p class="section-text">
+      Explore some of the most beautiful destinations in India.
+    </p>
+
+    <div class="destination-container">
+
+      <div class="destination-card">
+
+        <img src="images/goa.jpg" alt="Goa">
+
+        <h3>Goa</h3>
+
+        <p>
+          Beaches, nightlife and beautiful sunsets.
+        </p>
+
+        <button onclick="showDetails('Goa')">
+          View Details
+        </button>
+
+      </div>
+
+
+      <div class="destination-card">
+
+        <img src="images/manali.jpg" alt="Manali">
+
+        <h3>Manali</h3>
+
+        <p>
+          Mountains, snow and amazing adventure.
+        </p>
+
+        <button onclick="showDetails('Manali')">
+          View Details
+        </button>
+
+      </div>
+
+
+      <div class="destination-card">
+
+        <img src="images/kashmir.jpg" alt="Kashmir">
+
+        <h3>Kashmir</h3>
+
+        <p>
+          Heaven on Earth with beautiful valleys.
+        </p>
+
+        <button onclick="showDetails('Kashmir')">
+          View Details
+        </button>
+
+      </div>
+
+
+      <div class="destination-card">
+
+        <img src="images/rajasthan.jpg" alt="Rajasthan">
+
+        <h3>Rajasthan</h3>
+
+        <p>
+          Royal palaces, forts and rich culture.
+        </p>
+
+        <button onclick="showDetails('Rajasthan')">
+          View Details
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Packages -->
+
+  <section id="packages" class="section packages">
+
+    <h2>Tour Packages</h2>
+
+    <div class="package-container">
+
+      <div class="package-card">
+
+        <h3>Goa Trip</h3>
+
+        <h4>₹8,999</h4>
+
+        <p>4 Days / 3 Nights</p>
+
+        <p>✔ Hotel</p>
+        <p>✔ Food</p>
+        <p>✔ Sightseeing</p>
+
+        <a href="#booking" class="btn">
+          Book Now
+        </a>
+
+      </div>
+
+
+      <div class="package-card">
+
+        <h3>Manali Trip</h3>
+
+        <h4>₹12,999</h4>
+
+        <p>5 Days / 4 Nights</p>
+
+        <p>✔ Hotel</p>
+        <p>✔ Food</p>
+        <p>✔ Sightseeing</p>
+
+        <a href="#booking" class="btn">
+          Book Now
+        </a>
+
+      </div>
+
+
+      <div class="package-card">
+
+        <h3>Kashmir Trip</h3>
+
+        <h4>₹18,999</h4>
+
+        <p>6 Days / 5 Nights</p>
+
+        <p>✔ Hotel</p>
+        <p>✔ Food</p>
+        <p>✔ Sightseeing</p>
+
+        <a href="#booking" class="btn">
+          Book Now
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Gallery -->
+
+  <section id="gallery" class="section">
+
+    <h2>Travel Gallery</h2>
+
+    <div class="gallery">
+
+      <img src="images/goa.jpg" alt="Goa">
+
+      <img src="images/manali.jpg" alt="Manali">
+
+      <img src="images/kashmir.jpg" alt="Kashmir">
+
+      <img src="images/rajasthan.jpg" alt="Rajasthan">
+
+      <img src="images/kerala.jpg" alt="Kerala">
+
+    </div>
+
+  </section>
+
+
+  <!-- Booking -->
+
+  <section id="booking" class="section booking">
+
+    <h2>Book Your Tour</h2>
+
+    <form onsubmit="bookTour(event)">
+
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <input type="email" id="email" placeholder="Your Email" required>
+
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+
+      <select id="destination" required>
+
+        <option value="">
+          Select Destination
+        </option>
+
+        <option value="Goa">
+          Goa
+        </option>
+
+        <option value="Manali">
+          Manali
+        </option>
+
+        <option value="Kashmir">
+          Kashmir
+        </option>
+
+        <option value="Rajasthan">
+          Rajasthan
+        </option>
+
+      </select>
+
+
+      <input type="date" id="date" required>
+
+      <button type="submit" class="btn">
+        Submit Booking
+      </button>
+
+    </form>
+
+  </section>
+
+
+  <!-- Contact -->
+
+  <section id="contact" class="section contact">
+
+    <h2>Contact Us</h2>
+
+    <p>📍 Maharashtra, India</p>
+
+    <p>📞 +91 9876543210</p>
+
+    <p>📧 exploreindia@gmail.com</p>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <h3>ExploreIndia</h3>
+
+    <p>
+      © 2026 ExploreIndia. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
